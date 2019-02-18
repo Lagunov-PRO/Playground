@@ -34,9 +34,6 @@ print('Осталось гостей: {}'.format(guests_left))
 
 guests_string = str()  # Пустая строка
 for guest in guests:
-    guests_string = guests_string + ('{}, '.format(guest.title()))  # Пустая строка + элементы по списку
+    guests_string += ('{}, '.format(guest.title()))  # Пустая строка + элементы по списку
 
-print(guests_string[:-2])  # Отрубаем последние два знака
-
-#  TODO
-#   Как печатать номер элемента? Т.к. (guests.index(guest) + 1 ошибочно при одинаковых элементах
+print(guests_string[:-2])  # Отрубаем последние два символа
