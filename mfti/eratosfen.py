@@ -1,4 +1,4 @@
-upper_limit = 1_000
+upper_limit = 1000
 A = [True] * upper_limit
 A[0] = A[1] = False  # 0 and 1 are not primes
 numbers = [k for k in range(upper_limit)]
@@ -10,7 +10,7 @@ for k in range(upper_limit - 1):
             rejected.append(m)
             A[m] = False
     if rejected:
-        print('Делитель {}, отброшено {}'.format(k, len(rejected)))
+        print('Делитель {}, отброшено {}, {}'.format(k, len(rejected), rejected))
 
 primes = [k for k in range(upper_limit) if A[k]]
 
