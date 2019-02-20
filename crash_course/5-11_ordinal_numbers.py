@@ -10,6 +10,6 @@ for number in numbers:
         ordinal_numbers.append('2nd')
     elif number == 3:
         ordinal_numbers.append('3rd')
-    elif number > 3:
+    else:
         ordinal_numbers.append(str(number) + 'th')
 print(ordinal_numbers)
