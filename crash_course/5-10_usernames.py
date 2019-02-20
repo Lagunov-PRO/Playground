@@ -6,3 +6,6 @@ for new_user in new_users:
         print(new_user, 'can register')
     else:
         print(new_user, 'is already used')
+
+#  TODO
+#   How to check lowercased values without creating new list?
