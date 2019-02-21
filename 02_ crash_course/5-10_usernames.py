@@ -1,4 +1,4 @@
-#  Неудобный вывод
+#  Громоздкая итерация, неудобный вывод, лучше делать append, хотя ещё лучше см. ниже
 print('Iterating over list to compare')
 current_users = ['JoHn', 'Bob', 'Alice', 'admin']
 new_users = ['Alex', 'JOHN', 'aNNa', 'jOhn']

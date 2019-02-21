@@ -10,6 +10,12 @@ def primes_or_remainders(number):
         return dividing_by
 
 
+def get_factorization(prime_number_divisor, not_prime_number):
+    while not_prime_number < prime_number_divisor * 2:
+        times = 2 * prime_number_divisor
+    return times
+
+
 check_number = 56
 answer = primes_or_remainders(check_number)
 if answer is True:
@@ -26,5 +32,5 @@ else:
         print(prime_divisors)
         print('And those are not prime:')
         print(not_prime_divisors)
-
-
+        factorization = get_factorization(7, 56)
+        print(factorization)

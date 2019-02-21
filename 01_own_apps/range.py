@@ -1,4 +1,4 @@
-from app.months import list_of_months
+from own_apps.months import list_of_months
 
 print(list_of_months(3))
 
