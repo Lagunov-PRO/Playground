@@ -18,11 +18,13 @@ print(can_register_range)
 can_register_range_zero = ['{:02d}'.format(x) for x in range(1, len(can_register))]
 print(can_register_range_zero)
 
-numbered_items = []
-for x, y in enumerate(can_register, 1):
-    numbered_item = '{number:02d}. {list_item}'.format(number = x, list_item = y)
-    numbered_items.append(numbered_item)
-print(numbered_items)
+numbered_items = ['{:02d}. {}'.format(x, y) for x, y in enumerate(can_register, 1)]
+
+# numbered_items = []
+# for x, y in enumerate(can_register, 1):
+#     numbered_item = '{number:02d}. {list_item}'.format(number = x, list_item = y)
+#     numbered_items.append(numbered_item)
+# print(numbered_items)
 
 
 # can_register_no = ['. '.join("{}".format(x) for x in numbered) for numbered in enumerate(can_register, 1)]
