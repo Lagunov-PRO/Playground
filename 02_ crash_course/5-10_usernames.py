@@ -1,4 +1,4 @@
-#  Громоздкая итерация, неудобный вывод, лучше делать append, хотя ещё лучше см. ниже
+#  Громоздкая итерация, неудобный вывод, лучше делать append, хотя ещё лучше всё свернуть в comprehension, см. ниже
 print('Iterating over list to compare')
 current_users = ['JoHn', 'Bob', 'Alice', 'admin']
 new_users = ['Alex', 'JOHN', 'aNNa', 'jOhn']
@@ -18,11 +18,11 @@ new_users = ['Alex', 'JOHN', 'aNNa', 'jOhn', 'alice', 'rob']
 can_register = [new_user for new_user in new_users if new_user.lower() not in (x.lower() for x in current_users)]
 already_used = [new_user for new_user in new_users if new_user.lower() in (x.lower() for x in current_users)]
 
-print(can_register, 'can register')
-print(already_used, 'already used')
+print('\nCan register:\n', '\n'.join('\t{}'.format(x) for x in can_register))
+print('\nAlready used:\n', '\n'.join('\t{}'.format(x) for x in already_used))
 
 
-#  Используя set теряется возможно вернуть исходные совпадающие значения
+#  Используя set теряется возможно вернуть исходные значения с оригинальными регистрами
 print('\n Using sets to compare')
 current_users = ['JoHn', 'Bob', 'Alice', 'admin']
 new_users = ['alex', 'JOHN', 'anna', 'jOhn']
@@ -34,7 +34,3 @@ can_register = new_users_lowercased.difference(current_users_lowercased)
 
 print('{} is already used'.format(already_registered))
 print('{} can register'.format(can_register))
-
-
-#  TODO
-#   How to check lowercased values without creating a new list?
