@@ -10,16 +10,21 @@ def primes_or_remainders(number):
         return dividing_by
 
 
-check_number = 413
+check_number = 56
 answer = primes_or_remainders(check_number)
 if answer is True:
     print(check_number, 'is a prime')
 else:
     prime_divisors = [x for x in answer if primes_or_remainders(x) is True]
+    not_prime_divisors = [y for y in answer if primes_or_remainders(y) is not True]
     print('{} is not a prime, it has {} divisor{}:'.format(check_number, len(answer), '' if len(answer) < 2 else 's'))
     print(str(answer)[1:-1])
     if set(answer) == set(prime_divisors):
         print('All of which are prime!')
     else:
-        print('Of which those are prime:')
+        print('Of which only those are prime:')
         print(prime_divisors)
+        print('And those are not prime:')
+        print(not_prime_divisors)
+
+
