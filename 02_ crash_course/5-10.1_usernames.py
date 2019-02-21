@@ -19,7 +19,7 @@ can_register_range_zero = ['{:02d}'.format(x) for x in range(1, len(can_register
 print(can_register_range_zero)
 
 numbered_items = []
-for x, y in zip(list(range(1, len(can_register))), can_register):
+for x, y in enumerate(can_register, 1):
     numbered_item = '{number:02d}. {list_item}'.format(number = x, list_item = y)
     numbered_items.append(numbered_item)
 print(numbered_items)
@@ -37,3 +37,5 @@ print(numbered_items)
 #
 print('\nCan register:\n', '\n'.join('\t{}'.format(x) for x in numbered_items))
 # print('\nAlready used:\n', '\n'.join('\t{}'.format(x) for x in already_used_no))
+
+
