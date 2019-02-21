@@ -13,10 +13,10 @@ for new_user in new_users:
 #  Наилучший способ, можно сразу вернуть список неподходящих имён
 print('\nUsing list comprehensions to iterate')
 current_users = ['JoHn', 'Bob', 'Alice', 'admin']
-new_users = ['Alex', 'JOHN', 'aNNa', 'jOhn']
+new_users = ['Alex', 'JOHN', 'aNNa', 'jOhn', 'alice', 'rob']
 
-can_register = [new_user for new_user in new_users if new_user.lower() not in [x.lower() for x in current_users]]
-already_used = [new_user for new_user in new_users if new_user.lower() in [x.lower() for x in current_users]]
+can_register = [new_user for new_user in new_users if new_user.lower() not in (x.lower() for x in current_users)]
+already_used = [new_user for new_user in new_users if new_user.lower() in (x.lower() for x in current_users)]
 
 print(can_register, 'can register')
 print(already_used, 'already used')
