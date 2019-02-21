@@ -16,4 +16,4 @@ if answer is True:
     print(check_number, 'is a prime')
 else:
     print('{} is not a prime, it has {} divisor{}:'.format(check_number, len(answer), '' if len(answer) < 2 else 's'))
-    print(answer)
+    print(str(answer)[1:-1])
