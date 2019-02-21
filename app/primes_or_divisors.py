@@ -10,11 +10,10 @@ def primes_or_remainders(number):
         return dividing_by
 
 
-check_number = 417
+check_number = 32
 answer = primes_or_remainders(check_number)
 if answer is True:
     print(check_number, 'is a prime')
 else:
-    print('{} is not a prime it has {} divisors'.format(check_number, len(answer)) if len(answer) < 2 else
-          '{} is not a prime it has {} divisor'.format(check_number, len(answer)))
-
+    print('{} is not a prime, it has {} divisor{}:'.format(check_number, len(answer), '' if len(answer) < 2 else 's'))
+    print(answer)
