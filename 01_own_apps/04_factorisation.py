@@ -1,5 +1,13 @@
+"""
+Проверяем, является ли заданное число простым.
+Если является, то True, если не является, то выдаём список всех его делителей.
+В идеале выдать ещё и его факторизацию.
+В идеале в экспонентной форме.
+"""
+
+
 # check_number = int(input("Enter a digit and i will check if it is a prime"))
-def primes_or_remainders(number):
+def prime_or_divisors(number):
     upper_limit = int(number / 2 + 1)
     divisors = list(range(2, upper_limit))
 
@@ -10,19 +18,19 @@ def primes_or_remainders(number):
         return dividing_by
 
 
-def get_factorization(prime_number_divisor, not_prime_number):
-    while not_prime_number < prime_number_divisor * 2:
-        times = 2 * prime_number_divisor
-    return times
+# def get_factorization(prime_number_divisor, not_prime_number):
+#     while not_prime_number < prime_number_divisor * 2:
+#         times = 2 * prime_number_divisor
+#     return times
 
 
 check_number = 56
-answer = primes_or_remainders(check_number)
+answer = prime_or_divisors(check_number)
 if answer is True:
     print(check_number, 'is a prime')
 else:
-    prime_divisors = [x for x in answer if primes_or_remainders(x) is True]
-    not_prime_divisors = [y for y in answer if primes_or_remainders(y) is not True]
+    prime_divisors = [x for x in answer if prime_or_divisors(x) is True]
+    not_prime_divisors = [y for y in answer if prime_or_divisors(y) is not True]
     print('{} is not a prime, it has {} divisor{}:'.format(check_number, len(answer), '' if len(answer) < 2 else 's'))
     print(str(answer)[1:-1])
     if set(answer) == set(prime_divisors):
@@ -32,5 +40,9 @@ else:
         print(prime_divisors)
         print('And those are not prime:')
         print(not_prime_divisors)
-        factorization = get_factorization(7, 56)
-        print(factorization)
+        # factorization = get_factorization(7, 56)
+        # print(factorization)
+
+
+#  TODO
+#   According to Wolfram|Alpha we should add 1 in the start and the number itself to the list of divisors
