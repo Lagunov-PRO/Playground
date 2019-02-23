@@ -2,7 +2,7 @@ import graphics as gr
 import time
 
 window = gr.GraphWin('Squares', 600, 600)
-alpha = 0.1
+alpha = 0.2
 
 
 def fractal_rectangle(A, B, C, D, depth = 10, speed = 1):
