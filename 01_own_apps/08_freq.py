@@ -4,7 +4,7 @@ def sort_by_frequency(elements: list):
     for u in uniq:
         freq[u] = elements.count(u)  # пишем количествор в словарь
     result = []
-    for x in range(len(freq) - 1):
+    for x in range(len(freq)):
         for key in freq:
             if freq[key] == max(freq.values()) and max(freq.values()) != 0:
                 result.append(key)
@@ -12,7 +12,8 @@ def sort_by_frequency(elements: list):
     return result
 
 
-stats = [1, 2, 1, 3, 3, 3, 3, 0, 0, 0, 0, 0, 0, 77, 77, 77, 77, 77, 77, 77, 77, 5, 5, 5, 5]
+stats = [1]
 
 f = sort_by_frequency(stats)
 print(f)
+
