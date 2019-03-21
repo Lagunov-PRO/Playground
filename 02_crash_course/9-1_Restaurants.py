@@ -9,6 +9,10 @@ class Restaurants:
 
 
 mc = Restaurants('McDonalds', 'burgers')
+sub = Restaurants('Subway', 'sandwiches')
+br = Restaurants('Baskin Robins', 'ice-cream')
 
 Restaurants.describe_restaurant(mc)
+Restaurants.describe_restaurant(sub)
+Restaurants.describe_restaurant(br)
 
