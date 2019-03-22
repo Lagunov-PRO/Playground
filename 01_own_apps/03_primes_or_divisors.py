@@ -15,5 +15,5 @@ answer = primes_or_remainders(check_number)
 if answer is True:
     print(check_number, 'is a prime')
 else:
-    print('{} is not a prime, it has {} divisor{}:'.format(check_number, len(answer), '' if len(answer) < 2 else 's'))
+    print(f'{check_number} is not a prime, it has {len(answer)} divisor{"" if len(answer) < 2 else "s"}:')
     print(str(answer)[1:-1])
