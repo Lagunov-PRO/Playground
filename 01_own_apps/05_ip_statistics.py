@@ -22,7 +22,7 @@ for ip, traffic in ip_log:
                 ip_stat[ip] += int(traffic)
         else:
                 ip_stat[ip] = int(traffic)
-# print(ip_stat)
+print(ip_stat)
 ip_traffic_summary = 0
 for ip_address, ip_traffic in ip_stat.items():
         print('{}\t{}'.format(ip_address, ip_traffic))
