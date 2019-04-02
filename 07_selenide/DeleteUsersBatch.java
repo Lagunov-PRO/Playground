@@ -27,19 +27,8 @@ public class DeleteUsersBatch {
 
     @Test
     public void deleteAllTimestampUsers() {
-        // login.reg.0000
-
-//        String timestampEmail = generateTimestampEmail();
-//        registerNewUser(timestampEmail);
-//        String newUserPassword = getPasswordFromEmail(timestampEmail);
-//        loginNewUser(timestampEmail, newUserPassword);
-//        deleteNewUser(timestampEmail);
-
-
         Map newUsersLoginsPasswords = getAllNewUsersLoginsPasswords();
-
         newUsersLoginsPasswords.forEach((k, v) -> System.out.println(k, v));
-
     }
 
     private static void registerNewUser(String timestampEmail) {
