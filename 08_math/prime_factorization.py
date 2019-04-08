@@ -44,12 +44,11 @@ def prime_factorization(up_to):
             if n in building_blocks.keys():
                 factors.remove(n)
                 factors.extend(building_blocks[n])
-                
+
 
     return prime_factorization
 
 
 print(prime_factorization(1000))
 
-
-
+#  TODO: make a cycle
