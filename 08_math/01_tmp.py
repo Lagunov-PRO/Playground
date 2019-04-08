@@ -1,26 +1,16 @@
-from functools import reduce
 
 
-def prime_factorization(up_to):
-    divisors_list = list(range(2, up_to + 1))  # Just a list of all divisors that we need to check
-
-    prime_divisors_list = []
-    not_prime_factorization = []
-    for divisor in divisors_list:
-        tmp = []
-        for n in range(2, divisor + 1):
-            if divisor % n == 0:
-                tmp.append(n)
-        prime_divisors_list.append(*tmp) if len(tmp) == 1 else not_prime_factorization.append(tmp)
+def test():
     prime_factorization = {}
-    for factorization in not_prime_factorization:
+    for factorization in not_prime_divisors:
         number = factorization[-1]
         all_factors = factorization[0:-1]
         prime_factors = []
         for n in all_factors:
-            if n in prime_divisors_list:
+            if n in prime_divisors:
                 prime_factors.append(n)
         prime_factorization[number] = prime_factors
+
 
     for number, factors in prime_factorization.items():
         if len(factors) == 1:
@@ -49,6 +39,6 @@ def prime_factorization(up_to):
     return prime_factorization
 
 
-print(prime_factorization(1000))
+print(split_divisors_to_prime_and_not(20))
 
 #  TODO: make a cycle
